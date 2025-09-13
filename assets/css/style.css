@@ -1,0 +1,157 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  background: #f8f9fb;
+}
+
+/* Fila flex para altura igual de aside y main */
+.row.full-height {
+  display: flex;
+  align-items: stretch; /* estira las columnas a la misma altura */
+  min-height: 100vh; /* ocupa al menos toda la ventana */
+  gap: 1rem; /* espacio entre columnas */
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 25%; /* ancho fijo similar a col-lg-3 */
+  background: linear-gradient(180deg, #2a2a72, #009ffd);
+  color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.sidebar h4 {
+  color: #cfe8ff;
+  font-weight: 500;
+}
+
+.sidebar h5 {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Foto perfil */
+.foto-perfil {
+  width: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s;
+  margin: 15px auto;
+  display: block;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+}
+
+/* Iconos */
+.icono {
+  width: 28px;
+  height: 28px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.icono:hover {
+  transform: scale(1.2);
+}
+
+/* Main */
+main {
+  flex: 1; /* ocupa el resto del espacio */
+  display: flex;
+  flex-direction: column; /* apilar cards verticalmente */
+  justify-content: flex-start;
+  gap: 1rem; /* espacio uniforme entre cards */
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08) !important;
+  background: #fff;
+}
+
+.card h4 {
+  color: #2a2a72;
+  margin-bottom: 1rem;
+}
+
+.card p,
+.card li {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Separar artículos dentro de tarjetas */
+.card-body article:not(:last-child) {
+  margin-bottom: 2.5rem; /* espacio entre artículos de experiencia laboral */
+}
+
+/* Separar items de lista dentro de Formación Académica */
+.card-body ul li:not(:last-child) {
+  margin-bottom: 0.5rem; /* espacio entre diplomas */
+}
+
+/* Espacio adicional entre título y subtítulo de cada diploma */
+.card-body ul li h5 {
+  margin-bottom: 0.5rem;
+}
+
+/* Opcional: footer centrado */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.segundo_diploma {
+  margin-bottom: 1.8rem;
+}
